@@ -12,20 +12,20 @@ public class ReverseDelimeter {
 		ArrayList<String> wordArrayReverseList = new ArrayList<>();
 		String word = "";
 		if (str != null && charct != null) {
-		for (int i = 0; i < str.length(); i++) {
+			for (int i = 0; i < str.length(); i++) {
 
-			if (str.charAt(i) != charct) {
-				word = word + str.charAt(i);
+				if (str.charAt(i) != charct) {
+					word = word + str.charAt(i);
+				}
+				if (str.charAt(i) == charct || i == str.length() - 1) {
+					wordArrayList.add(word);
+					word = "";
+				}
 			}
-			if (str.charAt(i) == charct || i == str.length() - 1) {
-				wordArrayList.add(word);
-				word = "";
-			}
-		}
-		for (int j = wordArrayList.size() - 1; j >= 0; j--) {
-			wordArrayReverseList.add(wordArrayList.get(j));
+			for (int j = wordArrayList.size() - 1; j >= 0; j--) {
+				wordArrayReverseList.add(wordArrayList.get(j));
 
-		}
+			}
 		}
 		return wordArrayReverseList;
 	}

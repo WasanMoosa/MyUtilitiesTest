@@ -20,6 +20,7 @@ public class EvenOdd {
 		evenOddFunction(null);
 
 	}
+
 	/**
 	 * This Function take the array of integers, process it and produce HashMap that
 	 * includes even and odd arrays
@@ -27,7 +28,7 @@ public class EvenOdd {
 	 * @return HashMap
 	 */
 	public static HashMap<String, ArrayList<Integer>> evenOddFunction(Integer[] inputarray) {
-		if (inputarray==null) {
+		if (inputarray == null) {
 			return null;
 		}
 		HashMap<String, ArrayList<Integer>> evenOdd = new HashMap<>();

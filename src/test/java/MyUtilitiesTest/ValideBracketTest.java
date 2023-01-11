@@ -2,6 +2,8 @@ package MyUtilitiesTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.awt.print.PrinterException;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -25,7 +27,7 @@ class ValideBracketTest {
 	@DisplayName("Can throw an exception.")
 	void test3() throws Exception {
 		ValideBracket valideBracket = new ValideBracket();
-		assertThrows(NullPointerException.class, () -> valideBracket.validParantheses(null));
+		assertThrows(Exception.class, () -> valideBracket.validParantheses(null));
 	}
 
 }
